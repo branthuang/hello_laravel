@@ -11,6 +11,8 @@ class User extends Authenticatable implements MustVerifyEmailContract
 {
     use Notifiable, MustVerifyEmailTrait;
 
+    protected $table = 'users';
+
     protected $fillable = [
         'name', 'email', 'password',
     ];
